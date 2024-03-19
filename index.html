@@ -1,0 +1,48 @@
+<!-- If a number is divisible by 3, say FIZZ, if a number is divisible by 5 say BUZZ,  -->
+<!-- if a number is diviible by both, say FIZZBUZZ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <h1>FizzBuzz - A Divisibility Game</h1>
+    <p>
+
+        If a number is divisible by 3, say FIZZ<br>
+    If a number is divisible by 5, say BUZZ<br>
+    If a number is divisible by both, say FIZZBUZZ</p>
+    <label><h2>Type a number:</h2></label>    
+    <div><input id="myNumber" type="number" value="0"></div><br>
+    <input type="button" style="height:30px;width:70px"  onclick="division()" value="submit">
+    <p id="answer"></p>
+    <script>
+        division =()=> {
+            let num = document.getElementById("myNumber").value;
+
+            if (num % 3 === 0 && num % 5 === 0) {
+                document.getElementById("answer").innerHTML = "FIZZBUZZ";
+            }
+            else if (num % 5 === 0) {
+                document.getElementById("answer").innerHTML = "BUZZ";
+
+            }
+
+            else if (num % 3 === 0) {
+                 document.getElementById("answer").innerHTML = "FIZZ";
+
+            }
+
+            else {
+                document.getElementById("answer").innerHTML = "";
+
+            }
+
+
+        }
+    </script>
+</body>
+</html>
